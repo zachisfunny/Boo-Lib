@@ -1,0 +1,162 @@
+--New Tab:
+local tabname = library:AddTab("tabname");
+
+--Toggle:
+tab:AddToggle({
+    Text        = "test";
+    Callback    = function(state)
+        print(state);
+    end;
+    Enabled     = false;
+});
+
+--TextBox:
+tab:AddTextbox({
+    Text        = "hi";
+    Callback    = function(text)
+        print(text);
+    end;
+    StartText   = "ez";
+});
+
+--KeyBind:
+tab:AddKeybind({
+    Text        = "test";
+    Callback    = function(ez)
+        print(ez);
+    end;
+    Start       = "F";
+});
+
+--Dropdown:
+tab:AddDropdown({
+    Text = "d";
+    Callback = function(text)
+        print(text);
+    end;
+    Options = {
+        "hi";
+        "hi1";
+        "hi1";
+    };
+});
+
+--Slider:
+tab:AddSlider({
+    Text    = "d";
+    Min     = 0;
+    Max     = 10;
+    Def     = 1;
+    Callback = function(value)
+        print(value);
+    end;
+});
+
+--Button:
+tab:AddButton({
+    Text    = "test";
+    Callback = function()
+        print("hi");
+    end;
+});
+
+Put this at the end of your script:
+return library;
+
+-- Others:
+
+Multiple Game Support: -- lets you run a script on several different games on one loadstring
+if game.PlaceId == Game ID here then
+   local PlaceId = game.PlaceId
+   
+   -- If you already have an elseif, do an if, then do elseif, this repeats itself
+Anti-AFK:
+wait(3)
+local VirtualUser=game:service'VirtualUser'
+game:service('Players').LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+
+Fly:
+local FlyingKey = Enum.KeyCode.B
+loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/Fly-Script/main/Script'))()
+
+NoClip:
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.Torso.CanCollide = false
+
+Basic ESP:
+        local esp_settings = { ---- table for esp settings 
+        textsize = 10,
+        colour = 0,255,255
+    }
+
+
+    
+    local gui = Instance.new("BillboardGui")
+    local esp = Instance.new("TextLabel",gui) ---- new instances to make the billboard gui and the textlabel
+    
+    
+    
+    gui.Name = "Zachs ESP"; ---- properties of the esp
+    gui.ResetOnSpawn = false
+    gui.AlwaysOnTop = true;
+    gui.LightInfluence = 0;
+    gui.Size = UDim2.new(2, 0, 2, 0);
+    esp.BackgroundColor3 = Color3.fromRGB(0,255,255);
+    esp.Text = ""
+    esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
+    esp.BorderSizePixel = 4;
+    esp.BorderColor3 = Color3.new(esp_settings.colour)
+    esp.BorderSizePixel = 0
+    esp.Font = "Arial"
+    esp.TextSize = esp_settings.textsize
+    esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
+    
+    game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
+        for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+            if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Zachs ESP")==nil  then -- craeting checks for team check, local player etc
+                esp.Text = "["..v.Name.."]"
+                gui:Clone().Parent = v.Character.Head
+        end
+    end
+    end)
+
+Infinite Jump:
+        getgenv().inf = value -- this value is what you see then it says Callback = function(value), that value is basically an on and off script made for you
+        spawn(function()
+            while inf == true do
+                if (inf == false) then break end
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if inf then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+wait()
+end
+end)
+
+Notification:
+wait(1) -- in the () is how long u want it to wait before it pups up, in seconds
+game.StarterGui:SetCore("SendNotification", {
+Title = "this is how"; -- the title (ofc)
+Text = "to make a notification"; -- what the text says (ofc)
+Icon = "rbxassetid://57254792"; -- change the image id to what u want if u want an image, if not, delete this row.
+Duration = 5; -- how long the notification show should in secounds
+})
+
+Smoothly float to a location / Tween:
+	local New_CFrame = CFrame.new(the cframe)
+
+
+	local ts = game:GetService("TweenService")
+	local uis = game:GetService("UserInputService")
+	local char = game.Players.LocalPlayer.Character
+
+	local part = char.HumanoidRootPart
+	local ti = TweenInfo.new(1, Enum.EasingStyle.Linear)
+	local tp = {CFrame = New_CFrame}
+
+	ts:Create(part, ti, tp):Play()
