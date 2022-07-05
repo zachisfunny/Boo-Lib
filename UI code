@@ -727,3 +727,62 @@ do
         end;
     end;
 end;
+
+-- examples
+
+--[[local tab = library:AddTab("silver");
+
+tab:AddToggle({
+    Text        = "test";
+    Callback    = function(state)
+        print(state);
+    end;
+    Enabled     = false;
+});
+
+tab:AddTextbox({
+    Text        = "hi";
+    Callback    = function(text)
+        print(text);
+    end;
+    StartText   = "ez";
+});
+
+tab:AddKeybind({
+    Text        = "test";
+    Callback    = function(ez)
+        print(ez);
+    end;
+    Start       = "F";
+});
+
+tab:AddDropdown({
+    Text = "d";
+    Callback = function(text)
+        print(text);
+    end;
+    Options = {
+        "hi";
+        "hi1";
+        "hi1";
+    };
+});
+
+tab:AddSlider({
+    Text    = "d";
+    Min     = 0;
+    Max     = 10;
+    Def     = 1;
+    Callback = function(value)
+        print(value);
+    end;
+});
+
+tab:AddButton({
+    Text    = "test";
+    Callback = function()
+        print("hi");
+    end;
+});]]
+
+return library;
