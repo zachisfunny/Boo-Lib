@@ -1,0 +1,2 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/Boo-Lib/main/UI%20code"))()
+local main = library:AddTab("Main");
