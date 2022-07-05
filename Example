@@ -1,0 +1,57 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/Boo-Lib/main/UI%20code"))()
+local tabname = library:AddTab("tabname");
+
+tabname:AddToggle({
+    Text        = "test";
+    Callback    = function(state)
+        print(state);
+    end;
+    Enabled     = false;
+});
+
+tabname:AddTextbox({
+    Text        = "hi";
+    Callback    = function(text)
+        print(text);
+    end;
+    StartText   = "ez";
+});
+
+tabname:AddKeybind({
+    Text        = "test";
+    Callback    = function(ez)
+        print(ez);
+    end;
+    Start       = "F";
+});
+
+tabname:AddDropdown({
+    Text = "d";
+    Callback = function(text)
+        print(text);
+    end;
+    Options = {
+        "hi";
+        "hi1";
+        "hi1";
+    };
+});
+
+tabname:AddSlider({
+    Text    = "d";
+    Min     = 0;
+    Max     = 10;
+    Def     = 1;
+    Callback = function(value)
+        print(value);
+    end;
+});
+
+tabname:AddButton({
+    Text    = "test";
+    Callback = function()
+        print("hi");
+    end;
+});
+
+return library;
