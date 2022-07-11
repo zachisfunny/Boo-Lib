@@ -1,34 +1,41 @@
+--New UI:
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/Boo-Lib/main/UI%20code"))()
-local tabname = library:AddTab("tabname");
+ 
+--New Tab:
+local tab1 = library:AddTab("tabname");
 
-tabname:AddToggle({
-    Text        = "test";
-    Callback    = function(state)
-        print(state);
+--Toggle:
+tab1:AddToggle({
+    Text        = "toggle";
+    Callback    = function(value)
+        print(value);
     end;
     Enabled     = false;
 });
 
-tabname:AddTextbox({
-    Text        = "hi";
-    Callback    = function(text)
-        print(text);
+--TextBox:
+tab1:AddTextbox({
+    Text        = "textbox";
+    Callback    = function(value)
+        print(value);
     end;
-    StartText   = "ez";
+    StartText   = "textbox";
 });
 
-tabname:AddKeybind({
-    Text        = "test";
-    Callback    = function(ez)
-        print(ez);
+--KeyBind:
+tab1:AddKeybind({
+    Text        = "keybind";
+    Callback    = function(value)
+        print(value);
     end;
     Start       = "F";
 });
 
-tabname:AddDropdown({
-    Text = "d";
-    Callback = function(text)
-        print(text);
+--Dropdown:
+tab1:AddDropdown({
+    Text = "dropdown";
+    Callback = function(value)
+        print(value);
     end;
     Options = {
         "hi";
@@ -37,8 +44,9 @@ tabname:AddDropdown({
     };
 });
 
-tabname:AddSlider({
-    Text    = "d";
+--Slider:
+tab1:AddSlider({
+    Text    = "slider";
     Min     = 0;
     Max     = 10;
     Def     = 1;
@@ -47,11 +55,13 @@ tabname:AddSlider({
     end;
 });
 
-tabname:AddButton({
-    Text    = "test";
+--Button:
+tab1:AddButton({
+    Text    = "button";
     Callback = function()
-        print("hi");
+        print("button");
     end;
 });
 
+--Put this at the end of your script:
 return library;
