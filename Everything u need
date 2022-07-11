@@ -64,7 +64,7 @@ tab1:AddButton({
 });
 
 --Put this at the end of your script:
-i return library;
+return library;
 
 -- Others:
 
