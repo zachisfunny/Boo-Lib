@@ -163,3 +163,6 @@ Duration = 5; -- how long the notification show should in secounds
 	local tp = {CFrame = New_CFrame}
 
 	ts:Create(part, ti, tp):Play()
+
+--Chat Logger:
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/Chat-Logger-For-Roblox/main/Script'),true))()
