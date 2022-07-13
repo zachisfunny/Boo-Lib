@@ -166,3 +166,6 @@ Duration = 5; -- how long the notification show should in secounds
 
 --Chat Logger:
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/Chat-Logger-For-Roblox/main/Script'),true))()
+
+--Attach to back script:
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/Attach-to-back-Script/main/Script'),true))()
