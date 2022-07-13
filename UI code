@@ -1,6 +1,5 @@
 -- Start Table
 local library = {};
-
 -- debug service
 local getupvalues		= getupvalues or debug.getupvalues;
 local getupvalue 		= getupvalue or debug.getupvalue;
@@ -89,7 +88,7 @@ do
         Parent                      = MainFrame;
         BackgroundColor3            = Color3.new(1, 1, 1);
         BackgroundTransparency      = 1;
-        Size                        = UDim2.new(0, 425, 0, 48);
+        Size                        = UDim2.new(0, 463, 0, 48);
     });
 
     -- UIPadding Creation
@@ -125,7 +124,7 @@ do
                 Name                        = ("Tab" .. name);
                 Parent                      = TabsFrame;
                 BackgroundTransparency      = 1;
-                BackgroundColor3            = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                BackgroundColor3            = Color3.new(0.091, 0.091, 0.091);
                 BorderColor3                = Color3.new(0.137255, 0.137255, 0.137255);
                 Size                        = UDim2.new(0, 124, 0, 28);
                 AutoButtonColor             = false;
@@ -217,7 +216,7 @@ do
                 local MainToggleFrame = library:Create("Frame", {
                     Name                = ("Toggle" .. options.Text);
                     Parent              = Container;
-                    BackgroundColor3    = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                    BackgroundColor3    = Color3.new(0.092, 0.092, 0.092);
                     BorderColor3        = Color3.new(0.12549, 0.12549, 0.12549);
                     Size                = UDim2.new(1, -14, 0, 32);
                 });
@@ -239,7 +238,7 @@ do
                 -- TextButton
                 local TextButtonThingy = library:Create("TextButton", {
                     Parent                  = MainToggleFrame;
-                    BackgroundColor3        = Color3.new(1, 1, 1);
+                    BackgroundColor3        = Color3.new(0.093, 0.093, 0.093);
                     BackgroundTransparency  = 1;
                     Size                    = UDim2.new(1, 0, 1, 0);
                     Font                    = Enum.Font.SourceSans;
@@ -300,7 +299,7 @@ do
                 local MainFrameText = library:Create("Frame", {
                     Name                = ("Textframe" .. options.Text);
                     Parent              = Container;
-                    BackgroundColor3    = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                    BackgroundColor3    = Color3.new(0.094, 0.094, 0.094);
                     BorderColor3        = Color3.new(0.12549, 0.12549, 0.12549);
                     Size                = UDim2.new(1, -14, 0, 32);
                 });
@@ -309,7 +308,7 @@ do
                 library:Create("TextLabel", {
                     Name                    = ("Textbox" .. options.Text);
                     Parent                  = MainFrameText;
-                    BackgroundColor3        = Color3.new(1, 1, 1);
+                    BackgroundColor3        = Color3.new(0.095, 0.095, 0.095);
                     BackgroundTransparency  = 1;
                     Position                = UDim2.new(0, 10, 0, 0);
                     Size                    = UDim2.new(0, 200, 0, 32);
@@ -354,12 +353,12 @@ do
                 options = options or {
                     Text        = "";
                     Callback    = function() end;
-                    Start       = "E";
+                    Start       = "F";
                 };
 
                 local MainFrame = library:Create("Frame", {
                     Parent              = Container;
-                    BackgroundColor3    = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                    BackgroundColor3    = Color3.new(0.096, 0.096, 0.096);
                     BorderColor3        = Color3.new(0.12549, 0.12549, 0.12549);
                     Size                = UDim2.new(1, -14, 0, 32);
                 });
@@ -403,7 +402,7 @@ do
 
                 local MainTextbutton = library:Create("TextButton", {
                     Parent                  = MainFrame;
-                    BackgroundColor3        = Color3.new(1, 1, 1);
+                    BackgroundColor3        = Color3.new(0.097, 0.097, 0.097);
                     BackgroundTransparency  = 1;
                     Size                    = UDim2.new(1, 0, 1, 0);
                     Font                    = Enum.Font.SourceSans;
@@ -461,7 +460,7 @@ do
                 local DropdownMainFrame = library:Create("Frame", {
                     Name                = (options.Text .. "Dropdown");
                     Parent              = Container;
-                    BackgroundColor3    = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                    BackgroundColor3    = Color3.new(0.092, 0.092, 0.092);
                     BorderColor3        = Color3.new(0.12549, 0.12549, 0.12549);
                     Size                = UDim2.new(1, -14, 0, 32);
                 });
@@ -504,7 +503,7 @@ do
 
                 local MainTextbutton = library:Create("TextButton", {
                     Parent                  = DropdownMainFrame;
-                    BackgroundColor3        = Color3.new(1, 1, 1);
+                    BackgroundColor3        = Color3.new(0.099, 0.099, 0.099);
                     BackgroundTransparency  = 1;
                     Size                    = UDim2.new(1, 0, 1, 0);
                     Font                    = Enum.Font.SourceSans;
@@ -527,7 +526,7 @@ do
                 for i, v in next, options.Options do
                     local Button = library:Create("TextButton", {
                         Parent                  = DropdownList;
-                        BackgroundColor3        = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                        BackgroundColor3        = Color3.new(0.0910, 0.0910, 0.0910);
                         Size                    = UDim2.new(0, 417, 0, 25);
                         Font                    = Enum.Font.SourceSansSemibold;
                         TextColor3              = Color3.new(0.921569, 0.921569, 0.921569);
@@ -601,7 +600,7 @@ do
                 local SliderMainFrame = library:Create("Frame", {
                     Name                = (options.Text .. "Slider");
                     Parent              = Container;
-                    BackgroundColor3    = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                    BackgroundColor3    = Color3.new(0.0911, 0.0911, 0.0911);
                     BorderColor3        = Color3.new(0.12549, 0.12549, 0.12549);
                     Size                = UDim2.new(1, -14, 0, 50);
                 });
@@ -653,7 +652,7 @@ do
 
                 local MainTextbutton = library:Create("TextButton", {
                     Parent                  = SliderMainFrame;
-                    BackgroundColor3        = Color3.new(1, 1, 1);
+                    BackgroundColor3        = Color3.new(0.0912, 0.0912, 0.0912);
                     BackgroundTransparency  = 1;
                     Position                = UDim2.new(0.0350000188, 0, 0.920000017, -10);
                     Size                    = UDim2.new(0, 374, 0, 4);
@@ -704,7 +703,7 @@ do
                 -- TextButton
                 local TextButtonThingy = library:Create("TextButton", {
                     Parent                  = Container;
-                    BackgroundColor3        = Color3.new(0.0941176, 0.0941176, 0.0941176);
+                    BackgroundColor3        = Color3.new(0.0913, 0.0913, 0.0913);
                     BorderColor3            = Color3.new(0.12549, 0.12549, 0.12549);
                     BackgroundTransparency  = 0;
                     Size                    = UDim2.new(1, -14, 0, 32);
