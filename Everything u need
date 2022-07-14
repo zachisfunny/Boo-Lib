@@ -4,6 +4,14 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachi
 --New Tab:
 local tab1 = library:AddTab("tabname");
 
+--Button:
+tab1:AddButton({
+    Text    = "button";
+    Callback = function()
+        print("button");
+    end;
+});
+
 --Toggle:
 tab1:AddToggle({
     Text        = "toggle";
@@ -11,37 +19,6 @@ tab1:AddToggle({
         print(value);
     end;
     Enabled     = false;
-});
-
---TextBox:
-tab1:AddTextbox({
-    Text        = "textbox";
-    Callback    = function(value)
-        print(value);
-    end;
-    StartText   = "textbox";
-});
-
---KeyBind:
-tab1:AddKeybind({
-    Text        = "keybind";
-    Callback    = function(value)
-        print(value);
-    end;
-    Start       = "F";
-});
-
---Dropdown:
-tab1:AddDropdown({
-    Text = "dropdown";
-    Callback = function(value)
-        print(value);
-    end;
-    Options = {
-        "hi";
-        "hi1";
-        "hi1";
-    };
 });
 
 --Slider:
@@ -55,12 +32,35 @@ tab1:AddSlider({
     end;
 });
 
---Button:
-tab1:AddButton({
-    Text    = "button";
-    Callback = function()
-        print("button");
+--KeyBind:
+tab1:AddKeybind({
+    Text        = "keybind";
+    Callback    = function(value)
+        print(value);
     end;
+    Start       = "F";
+});
+
+--TextBox:
+tab1:AddTextbox({
+    Text        = "textbox";
+    Callback    = function(value)
+        print(value);
+    end;
+    StartText   = "textbox";
+});
+
+--Dropdown:
+tab1:AddDropdown({
+    Text = "dropdown";
+    Callback = function(value)
+        print(value);
+    end;
+    Options = {
+        "hi";
+        "hi1";
+        "hi1";
+    };
 });
 
 --Put this at the end of your script:
