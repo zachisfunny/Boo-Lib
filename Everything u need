@@ -63,9 +63,6 @@ tab1:AddDropdown({
     };
 });
 
---Put this at the end of your script:
-return library;
-
 -- Others:
 
 Multiple Game Support: -- lets you run a script on several different games on one loadstring
