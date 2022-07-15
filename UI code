@@ -81,6 +81,27 @@ do
         Active              = true;
         Draggable           = true;
     });
+    
+    
+    local closebutton = Instance.new("TextButton")
+    closebutton.Name = "CloseButton"
+    closebutton.Parent = MainFrame
+    closebutton.BackgroundColor3 = Color3.fromRGB(255, 80, 80)
+    closebutton.BorderSizePixel = 0
+    closebutton.Position = UDim2.new(0.955, 0, 0, 0)
+    closebutton.Size = UDim2.new(0, 20, 0, 20)
+    closebutton.Font = Enum.Font.SourceSansSemibold
+    closebutton.Text = "X"
+    closebutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    closebutton.TextScaled = true
+    closebutton.TextStrokeTransparency = 0
+    closebutton.TextWrapped = true
+
+
+closebutton.MouseButton1Down:connect(function()
+MainFrame.Visible = false
+end)
+    
 
     -- Tab Frame
     local TabsFrame = library:Create("Frame", {
